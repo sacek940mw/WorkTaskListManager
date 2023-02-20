@@ -5,8 +5,6 @@ import org.example.tasks.Task;
 import org.example.tasks.TasksList;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class AddTaskForm {
     private JTextField titleField;
@@ -20,27 +18,17 @@ public class AddTaskForm {
 
     public AddTaskForm() {
         MainWindow.getInstance().getFrame().setContentPane(taskPanel);
-        /*
-        frame = new JFrame();
-        frame.setDefaultCloseOperation(closeWindow());
-        frame.setSize(800,600);
-        frame.setContentPane(taskPanel);
-        frame.setVisible(true);
-        */
+
         dodajButton.addActionListener(e -> checkNewTask());
         anulujButton.addActionListener(e-> returnToTasksListForm());
     }
 
     private void returnToTasksListForm() {
-        TasksListForm tasksListForm = new TasksListForm();
+        new TasksListForm();
         MainWindow.getInstance().refresh();
     }
 
     private void createUIComponents() {
-        titleField = new JTextField();
-        titleField.setVisible(true);
-        descriptionArea = new JTextArea();
-        descriptionArea.setVisible(true);
         timeSpinner = new JSpinner();
         timeSpinner.setValue(15);
 
@@ -90,15 +78,4 @@ public class AddTaskForm {
         }
     }
 
-    private int closeWindow(){
-        return JFrame.DISPOSE_ON_CLOSE;
-    }
-
-    public AddTaskForm getInstance() {
-        return this;
-    }
-
-    public JPanel getTaskPanel() {
-        return taskPanel;
-    }
 }
