@@ -58,6 +58,7 @@ public class AddTaskForm {
     }
 
     void createTask(){
+        System.out.println("Create task method");
         Task task = new Task(titleField.getText(), (Integer) timeSpinner.getValue());
         task.setDescription(descriptionArea.getText());
         String result = TasksList.getInstance().addTask(task);
@@ -67,9 +68,9 @@ public class AddTaskForm {
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
 
-            returnToTasksListForm();
             SaveTasks st = new SaveTasks();
             st.run();
+            returnToTasksListForm();
         }else{
             JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
                     result,

@@ -29,7 +29,7 @@ public class TasksListForm {
         tl.getTasks().forEach(t -> tableModel.addRow(new Object[]{t.getTitle(), t.getDescription()}));
 
         tableTasks.setModel(tableModel);
-
+        System.out.println("UI create");
     }
 
     public TasksListForm(){

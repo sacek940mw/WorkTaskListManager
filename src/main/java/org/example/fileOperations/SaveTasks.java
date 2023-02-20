@@ -14,10 +14,10 @@ public class SaveTasks implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Saving tasks to file.");
-        try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath));
-            out.writeObject(TasksList.getInstance());
+        System.out.println("ASaving tasks to file.");
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            out.writeObject(TasksList.getInstance().getTasks());
+            out.flush();
 
         } catch (IOException e) {
             //throw new RuntimeException(e);
@@ -26,5 +26,6 @@ public class SaveTasks implements Runnable{
                     "Błąd zapisu zadań do pliku",
                     JOptionPane.ERROR_MESSAGE);
         }
+        System.out.println("zapisano zadania");
     }
 }

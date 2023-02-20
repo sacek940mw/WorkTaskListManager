@@ -1,11 +1,11 @@
 package org.example.tasks;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class Task {
+public class Task implements Serializable {
 
-    private String title = "", description = "";
-    int time = 0; //time in minutes
+    private String title, description;
+    int time; //time in minutes
 
     public Task(String title, int time) {
         this.title = title;

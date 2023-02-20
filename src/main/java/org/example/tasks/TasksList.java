@@ -2,11 +2,11 @@ package org.example.tasks;
 
 import java.util.ArrayList;
 
-public enum TasksList {
+public class TasksList {
 
-    INSTANCE();
+    static TasksList instance = new TasksList();
 
-    private final ArrayList<Task> tasks;
+    private ArrayList<Task> tasks;
 
     private TasksList() {
         this.tasks = new ArrayList<>();
@@ -18,6 +18,7 @@ public enum TasksList {
             return "Takie zadanie jest już dodane";
         }
         tasks.add(task);
+        System.out.println("dodano zadanie.");
         return "Dodano zadanie: " + task.getTitle();
     }
 
@@ -29,7 +30,12 @@ public enum TasksList {
         return tasks;
     }
 
+    @SuppressWarnings("Unchecked")
+    public void setTasks(ArrayList<Task> tasks){
+        this.tasks = tasks;
+    }
+
     public static TasksList getInstance() {
-        return INSTANCE;
+        return instance;
     }
 }
