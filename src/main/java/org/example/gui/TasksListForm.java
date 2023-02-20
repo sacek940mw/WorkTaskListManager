@@ -11,15 +11,11 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class TasksListForm {
-    private JPanel currentJPanel;
+
     private JPanel panel1;
     private JButton buttonNewTask;
     private JTable tableTasks;
     private JComboBox tasksComboBox;
-
-    private JFrame frame;
-
-    private AddTaskForm addTaskForm;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
@@ -34,12 +30,7 @@ public class TasksListForm {
     }
 
     public TasksListForm(){
-        frame = new JFrame("Lista dodanych zdań");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,600);
-        currentJPanel = panel1;
-        frame.setContentPane(currentJPanel);
-        frame.setVisible(true);
+        MainWindow.getInstance().getFrame().setContentPane(panel1);
 
         buttonNewTask.addActionListener(new ActionListener() {
             @Override
@@ -54,23 +45,13 @@ public class TasksListForm {
         String task = tasksComboBox.getSelectedItem().toString();
         switch (task){
             case "Zadanie":
-                addTaskForm = new AddTaskForm();
-                frame.setContentPane(addTaskForm.getTaskPanel());
-                frame.revalidate();
-                frame.repaint();
+                AddTaskForm addTaskForm = new AddTaskForm();
+                //frame.setContentPane(addTaskForm.getTaskPanel());
+                MainWindow.getInstance().refresh();
 
                 break;
             default:
                 System.out.println("Nieosłużone żądanie");
         }
-    }
-
-    private void refreshWindow(){
-        System.out.println("Window refresh");
-        tableTasks.removeAll();
-        DefaultTableModel dtm = (DefaultTableModel) tableTasks.getModel();
-        TasksList.getInstance().getTasks().stream().forEach(t -> dtm.addRow(new Object[]{t.getTitle(),t.getTime()}));
-        frame.getContentPane().repaint();
-        frame.getContentPane().repaint();
     }
 }

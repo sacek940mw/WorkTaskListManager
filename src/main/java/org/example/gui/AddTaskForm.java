@@ -18,6 +18,7 @@ public class AddTaskForm {
     //private final JFrame frame;
 
     public AddTaskForm() {
+        MainWindow.getInstance().getFrame().setContentPane(taskPanel);
         /*
         frame = new JFrame();
         frame.setDefaultCloseOperation(closeWindow());

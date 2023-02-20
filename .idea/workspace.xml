@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="WorkBegin">
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="17.02.22">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/ColNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ColNames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WorkBegin" />
