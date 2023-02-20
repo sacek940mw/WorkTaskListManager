@@ -1,5 +1,6 @@
 package org.example.gui;
 
+import org.example.fileOperations.SaveTasks;
 import org.example.tasks.Task;
 import org.example.tasks.TasksList;
 
@@ -27,11 +28,15 @@ public class AddTaskForm {
         frame.setVisible(true);
         */
         dodajButton.addActionListener(e -> checkNewTask());
-        //anulujButton.addActionListener(e->frame.dispose());
+        anulujButton.addActionListener(e-> returnToTasksListForm());
+    }
+
+    private void returnToTasksListForm() {
+        TasksListForm tasksListForm = new TasksListForm();
+        MainWindow.getInstance().refresh();
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         titleField = new JTextField();
         titleField.setVisible(true);
         descriptionArea = new JTextArea();
@@ -47,9 +52,17 @@ public class AddTaskForm {
     private void checkNewTask() {
         //sprawdzenie czy wartości są poprawne
         if(titleField.getText().equals("")){
-            System.out.println("Nazwa zadania nie może być pusta");
+            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+                    "Nazwa zadania nie może być pusta.",
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
+
+
         }else if((int) timeSpinner.getValue() <= 0){
-            System.out.println("Czas wykonania zadania nie może być mniejszy lub równy 0 minut");
+            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+                    "Czas wykonania zadania nie może być mniejszy lub równy 0 minut.",
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
         }else{
             //Jeśli warunki są spełnione dodaj nowe zadanie do listy zadań.
             createTask();
@@ -60,9 +73,20 @@ public class AddTaskForm {
         Task task = new Task(titleField.getText(), (Integer) timeSpinner.getValue());
         task.setDescription(descriptionArea.getText());
         String result = TasksList.getInstance().addTask(task);
-        System.out.println(result);
         if(result.startsWith("Dodano zadanie")){
-            //frame.dispose();
+            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+                    result,
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
+
+            returnToTasksListForm();
+            SaveTasks st = new SaveTasks();
+            st.run();
+        }else{
+            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+                    result,
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
         }
     }
 
