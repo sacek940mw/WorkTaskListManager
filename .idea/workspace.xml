@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="17.02.22">
-      <change afterPath="$PROJECT_DIR$/src/test/java/createTasksFile.java" afterDir="false" />
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="21.02.22 -1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="createTasksFileTest.createTasksFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkTaskListManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createTasksFileTest" />
+      <option name="METHOD_NAME" value="createTasksFileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="createTasksFile.createTasksFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkTaskListManager" />
       <option name="PACKAGE_NAME" value="" />
@@ -98,6 +105,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.createTasksFileTest.createTasksFileTest" />
         <item itemvalue="JUnit.createTasksFile.createTasksFile" />
         <item itemvalue="JUnit.createTasksFile" />
         <item itemvalue="JUnit.createTasksFile.writeTasksToFile" />
@@ -120,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676582439344</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="21.02.22 -1">
+      <created>1676939008649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676939008649</updated>
+    </task>
+    <task id="LOCAL-00003" summary="21.02.22 -1">
+      <created>1676939024573</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676939024573</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +170,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WorkBegin" />
-    <option name="LAST_COMMIT_MESSAGE" value="WorkBegin" />
+    <MESSAGE value="21.02.22 -1" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.02.22 -1" />
   </component>
 </project>

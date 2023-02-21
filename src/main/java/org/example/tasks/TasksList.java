@@ -1,6 +1,7 @@
 package org.example.tasks;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TasksList {
 
@@ -18,7 +19,7 @@ public class TasksList {
             return "Takie zadanie jest już dodane";
         }
         tasks.add(task);
-        System.out.println("dodano zadanie.");
+        Collections.sort(tasks);
         return "Dodano zadanie: " + task.getTitle();
     }
 

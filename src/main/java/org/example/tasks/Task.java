@@ -2,7 +2,7 @@ package org.example.tasks;
 
 import java.io.Serializable;
 
-public class Task implements Serializable {
+public class Task implements Serializable, Comparable<Task> {
 
     private String title, description;
     int time; //time in minutes
@@ -34,5 +34,11 @@ public class Task implements Serializable {
 
     public void setTime(int time) {
         this.time = time;
+    }
+
+
+    @Override
+    public int compareTo(Task o) {
+        return this.title.compareTo(o.title);
     }
 }
