@@ -14,18 +14,17 @@ public class ReadTasks implements Runnable{
 
     @Override
     public void run() {
-        try {
-            System.out.println("Reading tasks from file");
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath));
-            TasksList.getInstance().setTasks((ArrayList<Task>) in.readObject());
-
+        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
+            @SuppressWarnings("unchecked")
+            ArrayList<Task> tasks = (ArrayList<Task>) in.readObject();
+            TasksList.getInstance().setTasks(tasks);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
-                    e.getMessage(),
+                    e.getMessage() + "\n",
                     "Błąd odczytu zadań z pliku",
                     JOptionPane.ERROR_MESSAGE);
-        }catch(Exception e){
-            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }

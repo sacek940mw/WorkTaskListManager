@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="20.02.22 -2 mniej ostrzeżeń">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" afterDir="false" />
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="17.02.22">
+      <change afterPath="$PROJECT_DIR$/src/test/java/createTasksFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,17 +21,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,20 +45,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.fileOperations" />
-    </key>
-  </component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="WorkTaskListManager" />
@@ -78,9 +66,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="createTasksFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkTaskListManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createTasksFile" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="createTasksFile.createTasksFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkTaskListManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createTasksFile" />
+      <option name="METHOD_NAME" value="createTasksFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="createTasksFile.writeTasksToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkTaskListManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createTasksFile" />
+      <option name="METHOD_NAME" value="writeTasksToFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.createTasksFile.createTasksFile" />
+        <item itemvalue="JUnit.createTasksFile" />
+        <item itemvalue="JUnit.createTasksFile.writeTasksToFile" />
       </list>
     </recent_temporary>
   </component>
@@ -100,21 +120,7 @@
       <option name="project" value="LOCAL" />
       <updated>1676582439344</updated>
     </task>
-    <task id="LOCAL-00002" summary="20.02.22 - okna OK">
-      <created>1676890222501</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676890222501</updated>
-    </task>
-    <task id="LOCAL-00003" summary="20.02.22 -2 mniej ostrzeżeń">
-      <created>1676891918759</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1676891918759</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,7 +134,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -142,9 +148,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WorkBegin" />
-    <MESSAGE value="20.02.22 - okna OK" />
-    <MESSAGE value="20.02.22 -1" />
-    <MESSAGE value="20.02.22 -2 mniej ostrzeżeń" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.02.22 -2 mniej ostrzeżeń" />
+    <option name="LAST_COMMIT_MESSAGE" value="WorkBegin" />
   </component>
 </project>

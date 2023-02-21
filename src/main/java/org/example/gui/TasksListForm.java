@@ -15,6 +15,8 @@ public class TasksListForm {
 
     private JComboBox<String> tasksComboBox;
     private JLabel messageLabel;
+    private JButton edytujWybraneButton;
+    private JButton usuńWybraneButton;
 
     private void createUIComponents() {
         //utworzenie tabelki, w której wyświetlane będą dodane przez użytkownika zadania

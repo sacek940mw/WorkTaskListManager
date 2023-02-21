@@ -10,13 +10,10 @@ public class Main {
         Thread rt = new Thread(new ReadTasks());
         rt.start();
         try {
-            System.out.println("A");
             rt.join();
-            System.out.println("B");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
         //TasksListForm tasksListForm = new TasksListForm();
         new TasksListForm();
     }
