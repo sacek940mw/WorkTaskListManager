@@ -1,6 +1,6 @@
 package org.example.fileOperations;
 
-import org.example.gui.MainWindow;
+import org.example.gui.TasksWindow;
 import org.example.tasks.TasksList;
 
 import javax.swing.*;
@@ -21,7 +21,7 @@ public class SaveTasks implements Runnable{
 
         } catch (IOException e) {
             //throw new RuntimeException(e);
-            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     e.getMessage(),
                     "Błąd zapisu zadań do pliku",
                     JOptionPane.ERROR_MESSAGE);

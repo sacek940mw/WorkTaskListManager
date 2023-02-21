@@ -27,6 +27,10 @@ public class TasksList {
         tasks.remove(task);
     }
 
+    public synchronized void removeTask(String title){
+        //Task task = tasks.stream().findFirst(title);
+    }
+
     public ArrayList<Task> getTasks() {
         return tasks;
     }

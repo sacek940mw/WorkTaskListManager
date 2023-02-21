@@ -2,14 +2,14 @@ package org.example.gui;
 
 import javax.swing.*;
 
-public class MainWindow {
+public class TasksWindow {
 
-    private static MainWindow instance = new MainWindow();
+    private static TasksWindow instance = new TasksWindow();
 
     private JPanel currentJPanel;
     private JFrame frame;
 
-    private MainWindow(){
+    private TasksWindow(){
         frame = new JFrame("Zadania");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800,600);
@@ -33,7 +33,7 @@ public class MainWindow {
         this.currentJPanel = currentJPanel;
     }
 
-    public static MainWindow getInstance(){
+    public static TasksWindow getInstance(){
         return instance;
     }
 }

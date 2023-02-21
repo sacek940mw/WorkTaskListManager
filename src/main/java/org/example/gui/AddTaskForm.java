@@ -17,7 +17,7 @@ public class AddTaskForm {
     //private final JFrame frame;
 
     public AddTaskForm() {
-        MainWindow.getInstance().getFrame().setContentPane(taskPanel);
+        TasksWindow.getInstance().getFrame().setContentPane(taskPanel);
 
         dodajButton.addActionListener(e -> checkNewTask());
         anulujButton.addActionListener(e-> returnToTasksListForm());
@@ -25,7 +25,7 @@ public class AddTaskForm {
 
     private void returnToTasksListForm() {
         new TasksListForm();
-        MainWindow.getInstance().refresh();
+        TasksWindow.getInstance().refresh();
     }
 
     private void createUIComponents() {
@@ -40,14 +40,14 @@ public class AddTaskForm {
     private void checkNewTask() {
         //sprawdzenie czy wartości są poprawne
         if(titleField.getText().equals("")){
-            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     "Nazwa zadania nie może być pusta.",
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
 
 
         }else if((int) timeSpinner.getValue() <= 0){
-            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     "Czas wykonania zadania nie może być mniejszy lub równy 0 minut.",
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
@@ -63,7 +63,7 @@ public class AddTaskForm {
         task.setDescription(descriptionArea.getText());
         String result = TasksList.getInstance().addTask(task);
         if(result.startsWith("Dodano zadanie")){
-            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     result,
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
@@ -72,7 +72,7 @@ public class AddTaskForm {
             st.run();
             returnToTasksListForm();
         }else{
-            JOptionPane.showMessageDialog(MainWindow.getInstance().getFrame(),
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     result,
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
