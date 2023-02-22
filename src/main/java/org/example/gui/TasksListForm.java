@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class TasksListForm {
 
@@ -31,7 +32,6 @@ public class TasksListForm {
         tl.getTasks().forEach(t -> tableModel.addRow(new Object[]{t.getTitle(), t.getDescription()}));
 
         tableTasks.setModel(tableModel);
-        System.out.println("UI create");
     }
 
     public TasksListForm(){
@@ -41,9 +41,20 @@ public class TasksListForm {
         usunWybraneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                removeSelectedTasks();
             }
         });
+    }
+
+    private void removeSelectedTasks() {
+        int[] rows = tableTasks.getSelectedRows();
+        for(int r : rows){
+            String title = tableTasks.getModel().getValueAt(r,0).toString();
+            System.out.println(title);
+            TasksList.getInstance().removeTask(title);
+        }
+        createUIComponents();
+        TasksWindow.getInstance().refresh();
     }
 
     private void noweZadnie() {

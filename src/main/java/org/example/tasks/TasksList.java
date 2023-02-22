@@ -28,14 +28,17 @@ public class TasksList {
     }
 
     public synchronized void removeTask(String title){
-        //Task task = tasks.stream().findFirst(title);
+        tasks.stream().forEach(t->{
+            if(t.getTitle().equals(title)){
+                removeTask(t);
+            }
+        });
     }
 
     public ArrayList<Task> getTasks() {
         return tasks;
     }
 
-    @SuppressWarnings("Unchecked")
     public void setTasks(ArrayList<Task> tasks){
         this.tasks = tasks;
     }
