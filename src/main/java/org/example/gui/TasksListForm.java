@@ -37,27 +37,34 @@ public class TasksListForm {
     public TasksListForm(){
         TasksWindow.getInstance().getFrame().setContentPane(panel1);
 
-        buttonNewTask.addActionListener(e -> noweZadnie());
-        usunWybraneButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                removeSelectedTasks();
-            }
-        });
+        buttonNewTask.addActionListener(e -> newTask());
+        usunWybraneButton.addActionListener(e -> removeSelectedTasks());
+        edytujWybraneButton.addActionListener(e -> editSelectedTask());
+    }
+
+    private void editSelectedTask() {
+        if(tableTasks.getSelectedRowCount()>1){
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
+                    "Wybierz jedno zadanie do edycji.",
+                    "Błąd edycji zadania",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        int row = tableTasks.getSelectedRow();
+        String title = tableTasks.getModel().getValueAt(row,0).toString();
     }
 
     private void removeSelectedTasks() {
         int[] rows = tableTasks.getSelectedRows();
         for(int r : rows){
             String title = tableTasks.getModel().getValueAt(r,0).toString();
-            System.out.println(title);
             TasksList.getInstance().removeTask(title);
         }
         createUIComponents();
         TasksWindow.getInstance().refresh();
     }
 
-    private void noweZadnie() {
+    private void newTask() {
         new AddTaskForm();
         TasksWindow.getInstance().refresh();
     }
