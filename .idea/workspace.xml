@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="21.02.22 - 2">
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="21.02.22 - tasks default sorting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,14 +142,7 @@
       <option name="project" value="LOCAL" />
       <updated>1676939024573</updated>
     </task>
-    <task id="LOCAL-00004" summary="21.02.22 - 2">
-      <created>1677056697523</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1677056697523</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +171,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WorkBegin" />
     <MESSAGE value="21.02.22 -1" />
-    <MESSAGE value="21.02.22 - 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.02.22 - 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.02.22 -1" />
   </component>
 </project>

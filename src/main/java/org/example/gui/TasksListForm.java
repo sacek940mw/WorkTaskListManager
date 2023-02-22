@@ -1,13 +1,13 @@
 package org.example.gui;
 
 import org.example.enums.ColNames;
+import org.example.fileOperations.SaveTasks;
 import org.example.tasks.TasksList;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class TasksListForm {
 
@@ -37,35 +37,44 @@ public class TasksListForm {
     public TasksListForm(){
         TasksWindow.getInstance().getFrame().setContentPane(panel1);
 
-        buttonNewTask.addActionListener(e -> newTask());
-        usunWybraneButton.addActionListener(e -> removeSelectedTasks());
-        edytujWybraneButton.addActionListener(e -> editSelectedTask());
-    }
+        buttonNewTask.addActionListener(e -> noweZadnie());
+        usunWybraneButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removeSelectedTasks();
+            }
+        });
+        edytujWybraneButton.addActionListener(e -> {
 
-    private void editSelectedTask() {
-        if(tableTasks.getSelectedRowCount()>1){
-            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
-                    "Wybierz jedno zadanie do edycji.",
-                    "Błąd edycji zadania",
-                    JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        int row = tableTasks.getSelectedRow();
-        String title = tableTasks.getModel().getValueAt(row,0).toString();
+        });
     }
 
     private void removeSelectedTasks() {
-        int[] rows = tableTasks.getSelectedRows();
-        for(int r : rows){
-            String title = tableTasks.getModel().getValueAt(r,0).toString();
-            TasksList.getInstance().removeTask(title);
+        Object[] options = { "TAK", "NIE" };
+        int pane = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz trwale usunąć wybrane zadania?", "Warning",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+                null, options, options[0]);
+        if(pane == JOptionPane.YES_OPTION){
+            int[] rows = tableTasks.getSelectedRows();
+            for(int r : rows){
+                String title = tableTasks.getModel().getValueAt(r,0).toString();
+                System.out.println(title);
+                TasksList.getInstance().removeTask(title);
+            }
+            Thread st = new Thread(new SaveTasks());
+            st.start();
+            try {
+                st.join();
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            new TasksListForm();
+            TasksWindow.getInstance().refresh();
         }
-        createUIComponents();
-        TasksWindow.getInstance().refresh();
     }
 
-    private void newTask() {
-        new AddTaskForm();
+    private void noweZadnie() {
+        new TaskForm(true);
         TasksWindow.getInstance().refresh();
     }
 }
