@@ -1,13 +1,13 @@
 package org.example.gui;
 
 import org.example.enums.ColNames;
+import org.example.fileOperations.SaveTasks;
 import org.example.tasks.TasksList;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class TasksListForm {
 
@@ -44,21 +44,37 @@ public class TasksListForm {
                 removeSelectedTasks();
             }
         });
+        edytujWybraneButton.addActionListener(e -> {
+
+        });
     }
 
     private void removeSelectedTasks() {
-        int[] rows = tableTasks.getSelectedRows();
-        for(int r : rows){
-            String title = tableTasks.getModel().getValueAt(r,0).toString();
-            System.out.println(title);
-            TasksList.getInstance().removeTask(title);
+        Object[] options = { "TAK", "NIE" };
+        int pane = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz trwale usunąć wybrane zadania?", "Warning",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+                null, options, options[0]);
+        if(pane == JOptionPane.YES_OPTION){
+            int[] rows = tableTasks.getSelectedRows();
+            for(int r : rows){
+                String title = tableTasks.getModel().getValueAt(r,0).toString();
+                System.out.println(title);
+                TasksList.getInstance().removeTask(title);
+            }
+            Thread st = new Thread(new SaveTasks());
+            st.start();
+            try {
+                st.join();
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            new TasksListForm();
+            TasksWindow.getInstance().refresh();
         }
-        createUIComponents();
-        TasksWindow.getInstance().refresh();
     }
 
     private void noweZadnie() {
-        new AddTaskForm();
+        new TaskForm(true);
         TasksWindow.getInstance().refresh();
     }
 }

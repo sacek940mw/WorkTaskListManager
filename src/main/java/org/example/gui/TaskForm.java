@@ -6,7 +6,7 @@ import org.example.tasks.TasksList;
 
 import javax.swing.*;
 
-public class AddTaskForm {
+public class TaskForm {
     private JTextField titleField;
     private JSpinner timeSpinner;
     private JTextArea descriptionArea;
@@ -14,9 +14,11 @@ public class AddTaskForm {
     private JButton anulujButton;
     private JButton dodajButton;
 
-    //private final JFrame frame;
+    private final boolean create;
 
-    public AddTaskForm() {
+    public TaskForm(boolean create) {
+        this.create = create;
+
         TasksWindow.getInstance().getFrame().setContentPane(taskPanel);
 
         dodajButton.addActionListener(e -> checkNewTask());

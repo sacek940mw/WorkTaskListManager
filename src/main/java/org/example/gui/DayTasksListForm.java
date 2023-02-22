@@ -40,10 +40,10 @@ public class DayTasksListForm {
         String task = Objects.requireNonNull(tasksComboBox.getSelectedItem()).toString();
         messageLabel.setText("");
         if(task.equals("Zadanie")){
-            new AddTaskForm();
+            new TaskForm(true);
             TasksWindow.getInstance().refresh();
         }else{
-            System.out.println("Nieosłużone żądanie");
+            System.out.println("Nieobsłużone żądanie");
         }
     }
 }

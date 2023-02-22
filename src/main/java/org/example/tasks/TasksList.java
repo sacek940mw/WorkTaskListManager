@@ -27,12 +27,24 @@ public class TasksList {
         tasks.remove(task);
     }
 
-    public synchronized void removeTask(String title){
-        tasks.stream().forEach(t->{
-            if(t.getTitle().equals(title)){
-                removeTask(t);
+    public synchronized void updateTask(Task task){
+        for(Task t : tasks){
+            if(t.getTitle().equals(task.getTitle())){
+                t.updateTask(task);
+                break;
             }
-        });
+        }
+    }
+
+    public synchronized void removeTask(String title){
+        Task task = null;
+        for(Task t : TasksList.getInstance().tasks){
+            if(t.getTitle().equals(title))
+                task = t;
+        }
+        if(task != null){
+            removeTask(task);
+        }
     }
 
     public ArrayList<Task> getTasks() {
