@@ -2,6 +2,7 @@ package org.example.gui;
 
 import org.example.enums.ColNames;
 import org.example.fileOperations.SaveTasks;
+import org.example.tasks.Task;
 import org.example.tasks.TasksList;
 
 import javax.swing.*;
@@ -37,16 +38,9 @@ public class TasksListForm {
     public TasksListForm(){
         TasksWindow.getInstance().getFrame().setContentPane(panel1);
 
-        buttonNewTask.addActionListener(e -> noweZadnie());
-        usunWybraneButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                removeSelectedTasks();
-            }
-        });
-        edytujWybraneButton.addActionListener(e -> {
-
-        });
+        buttonNewTask.addActionListener(e -> newTask());
+        usunWybraneButton.addActionListener(e -> removeSelectedTasks());
+        edytujWybraneButton.addActionListener(e -> editTask());
     }
 
     private void removeSelectedTasks() {
@@ -58,7 +52,6 @@ public class TasksListForm {
             int[] rows = tableTasks.getSelectedRows();
             for(int r : rows){
                 String title = tableTasks.getModel().getValueAt(r,0).toString();
-                System.out.println(title);
                 TasksList.getInstance().removeTask(title);
             }
             Thread st = new Thread(new SaveTasks());
@@ -73,8 +66,11 @@ public class TasksListForm {
         }
     }
 
-    private void noweZadnie() {
-        new TaskForm(true);
+    private void newTask() {
+        new TaskForm();
         TasksWindow.getInstance().refresh();
+    }
+
+    private void editTask() {
     }
 }

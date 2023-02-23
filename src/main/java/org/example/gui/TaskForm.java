@@ -16,8 +16,9 @@ public class TaskForm {
 
     private final boolean create;
 
-    public TaskForm(boolean create) {
-        this.create = create;
+    //Tworzenie nowego zadania:
+    public TaskForm() {
+        this.create = true;
 
         TasksWindow.getInstance().getFrame().setContentPane(taskPanel);
 

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="21.02.22 - tasks default sorting">
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="22.02.23 -2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fb5ec04a-713c-4c70-b316-a25c24250a91" />
+        <option name="url" value="https://github.com/sacek940mw/WorkTaskListManager" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,6 +85,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="createTasksFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkTaskListManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="createTasksFileTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="createTasksFileTest.createTasksFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkTaskListManager" />
       <option name="PACKAGE_NAME" value="" />
@@ -92,23 +114,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="createTasksFile.writeTasksToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WorkTaskListManager" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="createTasksFile" />
-      <option name="METHOD_NAME" value="writeTasksToFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.createTasksFileTest" />
         <item itemvalue="JUnit.createTasksFileTest.createTasksFileTest" />
         <item itemvalue="JUnit.createTasksFile.createTasksFile" />
         <item itemvalue="JUnit.createTasksFile" />
-        <item itemvalue="JUnit.createTasksFile.writeTasksToFile" />
       </list>
     </recent_temporary>
   </component>
