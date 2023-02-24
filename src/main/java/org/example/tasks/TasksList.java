@@ -2,6 +2,7 @@ package org.example.tasks;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Optional;
 
 public class TasksList {
 
@@ -34,6 +35,10 @@ public class TasksList {
                 break;
             }
         }
+    }
+
+    public synchronized Optional<Task> getTaskByTitle(String title){
+        return tasks.stream().parallel().filter(t -> t.getTitle().equals(title)).findFirst();
     }
 
     public synchronized void removeTask(String title){

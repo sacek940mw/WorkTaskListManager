@@ -7,8 +7,7 @@ import org.example.tasks.TasksList;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.Optional;
 
 public class TasksListForm {
 
@@ -67,11 +66,26 @@ public class TasksListForm {
     }
 
     private void newTask() {
-        new TaskForm();
+        new AddTaskForm();
         TasksWindow.getInstance().refresh();
     }
 
     private void editTask() {
-
+        if(tableTasks.getSelectedRowCount() != 1){
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
+                    "Należy wybrać jedno zadanie do edycji. Wybranych zadań: " + tableTasks.getSelectedRowCount(),
+                    "Błąd edycji zadania",
+                    JOptionPane.PLAIN_MESSAGE);
+            return;
+        }
+        int row = tableTasks.getSelectedRow();
+        String title = tableTasks.getModel().getValueAt(row,0).toString();
+        Optional<Task> task = TasksList.getInstance().getTaskByTitle(title);
+        if(task.isPresent()){
+            new EditTaskForm(task.get());
+        }else{
+            throw new RuntimeException("Błąd. Nie znaleziono zadania po tytule.");
+        }
+        TasksWindow.getInstance().refresh();
     }
 }
