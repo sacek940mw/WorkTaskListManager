@@ -1,9 +1,5 @@
 package org.example.gui;
 
-import org.example.fileOperations.SaveTasks;
-import org.example.tasks.Task;
-import org.example.tasks.TasksList;
-
 import javax.swing.*;
 
 public abstract class TaskForm {
@@ -36,6 +32,27 @@ public abstract class TaskForm {
         doButton = new JButton();
     }
 
+    protected boolean checkTask() {
+        //sprawdzenie czy wartości są poprawne
+        if(titleField.getText().equals("")){
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
+                    "Nazwa zadania nie może być pusta.",
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
+
+            return true;
+        }
+        if((int) timeSpinner.getValue() <= 0){
+            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
+                    "Czas wykonania zadania nie może być mniejszy lub równy 0 minut.",
+                    "Zadanie nie zostało dodane",
+                    JOptionPane.PLAIN_MESSAGE);
+            return true;
+        }
+        //Jeśli warunki są spełnione
+        return false;
+
+    }
 
 
 }

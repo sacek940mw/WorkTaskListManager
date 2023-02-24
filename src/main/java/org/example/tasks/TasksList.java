@@ -28,13 +28,27 @@ public class TasksList {
         tasks.remove(task);
     }
 
-    public synchronized void updateTask(Task task){
+    public synchronized String updateTask(String oldTitle, Task task){
+        boolean contains = false;
+        if(!oldTitle.equals(task.getTitle())){
+            System.out.println("T: " + task.getTitle());
+            contains = tasks.stream().anyMatch(t -> {
+                System.out.println("t: " + t.getTitle());
+                return t.getTitle().equals(task.getTitle());
+            });
+            System.out.println(contains);
+        }
+        if(contains){
+            return "Takie zadanie jest już dodane";
+        }
         for(Task t : tasks){
-            if(t.getTitle().equals(task.getTitle())){
+            if(t.getTitle().equals(oldTitle)){
                 t.updateTask(task);
-                break;
+                Collections.sort(tasks);
+                return "Zaktualizowano zadanie: " + task.getTitle();
             }
         }
+        return "Nie zaktualizowano zadania";
     }
 
     public synchronized Optional<Task> getTaskByTitle(String title){

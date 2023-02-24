@@ -10,7 +10,7 @@ public class AddTaskForm extends TaskForm{
 
     public AddTaskForm(){
         super();
-        doButton.addActionListener(e -> checkNewTask());
+        doButton.addActionListener(e -> createTask());
         fillWindowWithData();
     }
 
@@ -18,28 +18,10 @@ public class AddTaskForm extends TaskForm{
         doButton.setText("Dodaj zadanie");
     }
 
-    private void checkNewTask() {
-        //sprawdzenie czy wartości są poprawne
-        if(titleField.getText().equals("")){
-            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
-                    "Nazwa zadania nie może być pusta.",
-                    "Zadanie nie zostało dodane",
-                    JOptionPane.PLAIN_MESSAGE);
-
-
-        }else if((int) timeSpinner.getValue() <= 0){
-            JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
-                    "Czas wykonania zadania nie może być mniejszy lub równy 0 minut.",
-                    "Zadanie nie zostało dodane",
-                    JOptionPane.PLAIN_MESSAGE);
-        }else{
-            //Jeśli warunki są spełnione dodaj nowe zadanie do listy zadań.
-            createTask();
-        }
-    }
-
     private void createTask(){
-        System.out.println("Create task method");
+        if(checkTask())
+            return;
+
         Task task = new Task(titleField.getText(), (Integer) timeSpinner.getValue());
         task.setDescription(descriptionArea.getText());
         String result = TasksList.getInstance().addTask(task);

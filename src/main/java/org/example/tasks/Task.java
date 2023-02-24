@@ -12,14 +12,20 @@ public class Task implements Serializable, Comparable<Task> {
         this.time = time;
     }
 
-    void updateTask(){
-        this.description = description;
-        this.time = time;
-    }
-
-    void updateTask(Task task){
+    public Task(Task task){
+        this.title = task.title;
         this.description = task.description;
         this.time = task.time;
+    }
+
+    void updateTask(Task task) {
+        this.title = task.title;
+        this.description = task.description;
+        this.time = task.time;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getTitle() {
