@@ -14,7 +14,6 @@ public class EditTaskForm extends TaskForm{
     public EditTaskForm(Task task){
         super();
         doButton.addActionListener(e -> updateTask());
-
         this.task = new Task(task);
         this.title = task.getTitle();
         fillWindowWithData();
