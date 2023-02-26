@@ -1,8 +1,8 @@
 package org.example.gui;
 
 import org.example.fileOperations.SaveTasks;
+import org.example.tasks.AllTasksList;
 import org.example.tasks.Task;
-import org.example.tasks.TasksList;
 
 import javax.swing.*;
 
@@ -35,7 +35,7 @@ public class EditTaskForm extends TaskForm{
         task.setDescription(descriptionArea.getText());
         task.setTime((Integer) timeSpinner.getValue());
 
-        String result = TasksList.getInstance().updateTask(title, task);
+        String result = AllTasksList.getInstance().updateTask(title, task);
         System.out.println(result);
         if(result.startsWith("Zaktualizowano zadanie")){
             JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),

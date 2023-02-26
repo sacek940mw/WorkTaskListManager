@@ -2,6 +2,7 @@ package org.example.gui;
 
 import org.example.enums.ColNames;
 import org.example.fileOperations.SaveTasks;
+import org.example.tasks.AllTasksList;
 import org.example.tasks.Task;
 import org.example.tasks.TasksList;
 
@@ -28,7 +29,7 @@ public class TasksListForm {
         }
 
         //dodanie wierszy tabeli
-        TasksList tl = TasksList.getInstance();
+        TasksList tl = AllTasksList.getInstance();
         tl.getTasks().forEach(t -> tableModel.addRow(new Object[]{t.getTitle(), t.getDescription()}));
 
         tableTasks.setModel(tableModel);
@@ -51,7 +52,7 @@ public class TasksListForm {
             int[] rows = tableTasks.getSelectedRows();
             for(int r : rows){
                 String title = tableTasks.getModel().getValueAt(r,0).toString();
-                TasksList.getInstance().removeTask(title);
+                AllTasksList.getInstance().removeTask(title);
             }
             Thread st = new Thread(new SaveTasks());
             st.start();
@@ -80,7 +81,7 @@ public class TasksListForm {
         }
         int row = tableTasks.getSelectedRow();
         String title = tableTasks.getModel().getValueAt(row,0).toString();
-        Optional<Task> task = TasksList.getInstance().getTaskByTitle(title);
+        Optional<Task> task = AllTasksList.getInstance().getTaskByTitle(title);
         if(task.isPresent()){
             new EditTaskForm(task.get());
         }else{

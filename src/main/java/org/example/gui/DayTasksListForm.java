@@ -1,9 +1,11 @@
 package org.example.gui;
 
 import org.example.enums.ColNames;
+import org.example.tasks.Task;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class DayTasksListForm {
@@ -13,9 +15,11 @@ public class DayTasksListForm {
     private JTable tableTasks;
 
     private JComboBox<String> tasksComboBox;
-    private JLabel messageLabel;
     private JButton edytujWybraneButton;
     private JButton usunWybraneButton;
+    private JLabel timeDesLabel;
+    private JLabel timeLabel;
+
 
     private void createUIComponents() {
         //utworzenie tabelki, w której wyświetlane będą dodane przez użytkownika zadania
@@ -38,7 +42,6 @@ public class DayTasksListForm {
 
     private void noweZadnie() {
         String task = Objects.requireNonNull(tasksComboBox.getSelectedItem()).toString();
-        messageLabel.setText("");
         if(task.equals("Zadanie")){
             new AddTaskForm();
             TasksWindow.getInstance().refresh();

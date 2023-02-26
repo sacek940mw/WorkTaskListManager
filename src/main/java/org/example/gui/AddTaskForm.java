@@ -1,8 +1,8 @@
 package org.example.gui;
 
 import org.example.fileOperations.SaveTasks;
+import org.example.tasks.AllTasksList;
 import org.example.tasks.Task;
-import org.example.tasks.TasksList;
 
 import javax.swing.*;
 
@@ -24,7 +24,7 @@ public class AddTaskForm extends TaskForm{
 
         Task task = new Task(titleField.getText(), (Integer) timeSpinner.getValue());
         task.setDescription(descriptionArea.getText());
-        String result = TasksList.getInstance().addTask(task);
+        String result = AllTasksList.getInstance().addTask(task);
         if(result.startsWith("Dodano zadanie")){
             JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     result,

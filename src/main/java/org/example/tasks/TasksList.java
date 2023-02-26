@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Optional;
 
-public class TasksList {
+public abstract class TasksList {
 
-    static TasksList instance = new TasksList();
+
 
     private ArrayList<Task> tasks;
 
-    private TasksList() {
+    protected TasksList() {
         this.tasks = new ArrayList<>();
     }
 
@@ -57,7 +57,7 @@ public class TasksList {
 
     public synchronized void removeTask(String title){
         Task task = null;
-        for(Task t : TasksList.getInstance().tasks){
+        for(Task t : tasks){
             if(t.getTitle().equals(title))
                 task = t;
         }
@@ -74,7 +74,5 @@ public class TasksList {
         this.tasks = tasks;
     }
 
-    public static TasksList getInstance() {
-        return instance;
-    }
+
 }

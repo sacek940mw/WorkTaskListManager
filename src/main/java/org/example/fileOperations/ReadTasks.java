@@ -1,8 +1,8 @@
 package org.example.fileOperations;
 
 import org.example.gui.TasksWindow;
+import org.example.tasks.AllTasksList;
 import org.example.tasks.Task;
-import org.example.tasks.TasksList;
 
 import javax.swing.*;
 import java.io.*;
@@ -17,7 +17,7 @@ public class ReadTasks implements Runnable{
         try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
             @SuppressWarnings("unchecked")
             ArrayList<Task> tasks = (ArrayList<Task>) in.readObject();
-            TasksList.getInstance().setTasks(tasks);
+            AllTasksList.getInstance().setTasks(tasks);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(TasksWindow.getInstance().getFrame(),
                     e.getMessage() + "\n",
