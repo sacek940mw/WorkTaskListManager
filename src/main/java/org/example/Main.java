@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.fileOperations.ReadTasks;
+import org.example.gui.DayTasksListForm;
 import org.example.gui.TasksListForm;
 import org.example.tasks.AllTasksList;
 
@@ -15,7 +16,8 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        //TasksListForm tasksListForm = new TasksListForm();
-        new TasksListForm();
+
+        //new TasksListForm();
+        new DayTasksListForm();
     }
 }

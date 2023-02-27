@@ -1,11 +1,10 @@
 package org.example.gui;
 
 import org.example.enums.ColNames;
-import org.example.tasks.Task;
+import org.example.tasks.AllTasksList;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class DayTasksListForm {
@@ -19,6 +18,7 @@ public class DayTasksListForm {
     private JButton usunWybraneButton;
     private JLabel timeDesLabel;
     private JLabel timeLabel;
+    private JButton aktywnościButton;
 
 
     private void createUIComponents() {
@@ -30,6 +30,8 @@ public class DayTasksListForm {
         }
         tableModel.addColumn("Czas (min.)");
 
+        tasksComboBox = new JComboBox<>();
+
         tableTasks.setModel(tableModel);
         System.out.println("UI create");
     }
@@ -38,6 +40,10 @@ public class DayTasksListForm {
         TasksWindow.getInstance().getFrame().setContentPane(panel1);
 
         buttonChoseTask.addActionListener(e -> noweZadnie());
+
+        AllTasksList.getInstance().getTasks().forEach(t->{
+            tasksComboBox.addItem(t.getTitle());
+        });
     }
 
     private void noweZadnie() {
