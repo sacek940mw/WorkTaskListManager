@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="24.02.22 -1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/AllTasksList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/TasksList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677233387265</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="24.02.22 -1">
+      <created>1677444935916</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677444935916</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

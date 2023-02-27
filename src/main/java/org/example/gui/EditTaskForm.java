@@ -24,7 +24,7 @@ public class EditTaskForm extends TaskForm{
         timeSpinner.setValue(task.getTime());
         descriptionArea.setText(task.getDescription());
         wTitleLabel.setText("EDYTUJ ZADANIE");
-        doButton.setText("Edytuj zadanie");
+        doButton.setText("Edytuj");
     }
 
     private void updateTask() {
