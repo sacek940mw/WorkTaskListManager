@@ -31,7 +31,7 @@ public class AddTaskForm extends TaskForm{
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
 
-            SaveTasks st = new SaveTasks();
+            SaveTasks st = new SaveTasks("files\\tasks.ser", AllTasksList.getInstance());
             st.run();
             returnToTasksListForm();
         }else{

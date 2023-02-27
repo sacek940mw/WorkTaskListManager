@@ -1,7 +1,7 @@
 package org.example.fileOperations;
 
 import org.example.gui.TasksWindow;
-import org.example.tasks.AllTasksList;
+import org.example.tasks.TasksList;
 
 import javax.swing.*;
 import java.io.FileOutputStream;
@@ -10,13 +10,19 @@ import java.io.ObjectOutputStream;
 
 public class SaveTasks implements Runnable{
 
-    String filePath = "files\\tasks.ser";
+    String filePath;
+    TasksList taskList;
+
+    public SaveTasks(String filePath, TasksList taskList) {
+        this.filePath = filePath;
+        this.taskList = taskList;
+    }
 
     @Override
     public void run() {
         System.out.println("ASaving tasks to file.");
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
-            out.writeObject(AllTasksList.getInstance().getTasks());
+            out.writeObject(taskList.getTasks());
             out.flush();
 
         } catch (IOException e) {

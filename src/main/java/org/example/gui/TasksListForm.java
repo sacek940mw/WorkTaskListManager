@@ -16,7 +16,6 @@ public class TasksListForm {
     private JButton buttonNewTask;
     private JTable tableTasks;
 
-    private JLabel messageLabel;
     private JButton edytujWybraneButton;
     private JButton usunWybraneButton;
 
@@ -54,7 +53,7 @@ public class TasksListForm {
                 String title = tableTasks.getModel().getValueAt(r,0).toString();
                 AllTasksList.getInstance().removeTask(title);
             }
-            Thread st = new Thread(new SaveTasks());
+            Thread st = new Thread(new SaveTasks("files\\tasks.ser", AllTasksList.getInstance()));
             st.start();
             try {
                 st.join();

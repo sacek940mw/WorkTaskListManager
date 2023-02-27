@@ -43,7 +43,7 @@ public class EditTaskForm extends TaskForm{
                     "Zadanie nie zostało zaktualizowane",
                     JOptionPane.PLAIN_MESSAGE);
 
-            SaveTasks st = new SaveTasks();
+            SaveTasks st = new SaveTasks("files\\tasks.ser", AllTasksList.getInstance());
             st.run();
             returnToTasksListForm();
         }else{

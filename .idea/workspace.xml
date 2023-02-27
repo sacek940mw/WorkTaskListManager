@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="24.02.22 -1">
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="27.02.22 -2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/ReadTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fileOperations/SaveTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/createTasksFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/createTasksFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +105,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.createTasksFileTest" />
         <item itemvalue="JUnit.createTasksFileTest.createTasksFileTest" />
+        <item itemvalue="JUnit.createTasksFileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677444935916</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="27.02.22 -1">
+      <created>1677488551165</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677488551165</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +201,8 @@
     <MESSAGE value="20.02.22 -2 mniej ostrzeżeń" />
     <MESSAGE value="22.02.22 -1" />
     <MESSAGE value="24.02.22 -1" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.22 -1" />
+    <MESSAGE value="27.02.22 -1" />
+    <MESSAGE value="27.02.22 -2" />
+    <option name="LAST_COMMIT_MESSAGE" value="27.02.22 -2" />
   </component>
 </project>
