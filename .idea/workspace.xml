@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="27.02.22 -3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/tasks/DayTasksList.java" afterDir="false" />
+    <list default="true" id="e9e9d187-01f4-444c-9dce-e0d5b8cd6f4d" name="Changes" comment="22.02.22 -1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddDayTaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/AddTaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/DayTasksListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/EditTaskForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TaskForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gui/TasksListForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +67,6 @@
       <recent name="C:\Users\Sacek_praca\IdeaProjects\WorkTaskListManager\src\main\java\org\example\gui" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.tasks" />
       <recent name="org.example.fileOperations" />
     </key>
   </component>
@@ -103,8 +106,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.createTasksFileTest.createTasksFileTest" />
         <item itemvalue="JUnit.createTasksFileTest" />
+        <item itemvalue="JUnit.createTasksFileTest.createTasksFileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -138,49 +141,7 @@
       <option name="project" value="LOCAL" />
       <updated>1676891918759</updated>
     </task>
-    <task id="LOCAL-00004" summary="22.02.22 -1">
-      <created>1677233338277</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1677233338277</updated>
-    </task>
-    <task id="LOCAL-00005" summary="24.02.22 -1">
-      <created>1677233387265</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1677233387265</updated>
-    </task>
-    <task id="LOCAL-00006" summary="24.02.22 -1">
-      <created>1677444935916</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1677444935916</updated>
-    </task>
-    <task id="LOCAL-00007" summary="27.02.22 -1">
-      <created>1677488551165</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1677488551165</updated>
-    </task>
-    <task id="LOCAL-00008" summary="27.02.22 -2">
-      <created>1677500938085</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1677500938085</updated>
-    </task>
-    <task id="LOCAL-00009" summary="27.02.22 -3">
-      <created>1677501023486</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1677501023486</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,10 +173,6 @@
     <MESSAGE value="20.02.22 -1" />
     <MESSAGE value="20.02.22 -2 mniej ostrzeżeń" />
     <MESSAGE value="22.02.22 -1" />
-    <MESSAGE value="24.02.22 -1" />
-    <MESSAGE value="27.02.22 -1" />
-    <MESSAGE value="27.02.22 -2" />
-    <MESSAGE value="27.02.22 -3" />
-    <option name="LAST_COMMIT_MESSAGE" value="27.02.22 -3" />
+    <option name="LAST_COMMIT_MESSAGE" value="22.02.22 -1" />
   </component>
 </project>

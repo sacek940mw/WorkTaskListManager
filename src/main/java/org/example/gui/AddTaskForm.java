@@ -8,17 +8,28 @@ import javax.swing.*;
 
 public class AddTaskForm extends TaskForm{
 
-    public AddTaskForm(){
+    String filePath;
+
+    public AddTaskForm(String filePath){
         super();
+        this.filePath = filePath;
         doButton.addActionListener(e -> createTask());
+
+        anulujButton.addActionListener(e -> returnToTasksListForm());
+
         fillWindowWithData();
     }
 
-    private void fillWindowWithData() {
+    protected void returnToTasksListForm() {
+        new TasksListForm();
+        TasksWindow.getInstance().refresh();
+    }
+
+    protected void fillWindowWithData() {
         doButton.setText("Dodaj zadanie");
     }
 
-    private void createTask(){
+    protected void createTask(){
         if(checkTask())
             return;
 
@@ -31,7 +42,7 @@ public class AddTaskForm extends TaskForm{
                     "Zadanie nie zostało dodane",
                     JOptionPane.PLAIN_MESSAGE);
 
-            SaveTasks st = new SaveTasks("files\\tasks.ser", AllTasksList.getInstance());
+            SaveTasks st = new SaveTasks(filePath, AllTasksList.getInstance());
             st.run();
             returnToTasksListForm();
         }else{

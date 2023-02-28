@@ -18,6 +18,7 @@ public class TasksListForm {
 
     private JButton edytujWybraneButton;
     private JButton usunWybraneButton;
+    private JButton powrotButton;
 
     private void createUIComponents() {
         //utworzenie tabelki, w której wyświetlane będą dodane przez użytkownika zadania
@@ -40,6 +41,12 @@ public class TasksListForm {
         buttonNewTask.addActionListener(e -> newTask());
         usunWybraneButton.addActionListener(e -> removeSelectedTasks());
         edytujWybraneButton.addActionListener(e -> editTask());
+        powrotButton.addActionListener(e -> returnFunction());
+    }
+
+    private void returnFunction() {
+        new DayTasksListForm();
+        TasksWindow.getInstance().refresh();
     }
 
     private void removeSelectedTasks() {
@@ -66,7 +73,7 @@ public class TasksListForm {
     }
 
     private void newTask() {
-        new AddTaskForm();
+        new AddTaskForm("files\\tasks.ser");
         TasksWindow.getInstance().refresh();
     }
 

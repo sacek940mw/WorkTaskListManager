@@ -13,9 +13,12 @@ public class EditTaskForm extends TaskForm{
 
     public EditTaskForm(Task task){
         super();
-        doButton.addActionListener(e -> updateTask());
         this.task = new Task(task);
         this.title = task.getTitle();
+
+        doButton.addActionListener(e -> updateTask());
+        anulujButton.addActionListener(e -> returnToTasksListForm());
+
         fillWindowWithData();
     }
 
@@ -25,6 +28,11 @@ public class EditTaskForm extends TaskForm{
         descriptionArea.setText(task.getDescription());
         wTitleLabel.setText("EDYTUJ ZADANIE");
         doButton.setText("Edytuj");
+    }
+
+    protected void returnToTasksListForm() {
+        new TasksListForm();
+        TasksWindow.getInstance().refresh();
     }
 
     private void updateTask() {

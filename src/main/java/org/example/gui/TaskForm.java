@@ -16,12 +16,7 @@ public abstract class TaskForm {
     protected TaskForm() {
         TasksWindow.getInstance().getFrame().setContentPane(taskPanel);
 
-        anulujButton.addActionListener(e-> returnToTasksListForm());
-    }
-
-    protected void returnToTasksListForm() {
-        new TasksListForm();
-        TasksWindow.getInstance().refresh();
+        //anulujButton.addActionListener(e-> returnToTasksListForm());
     }
 
     protected void createUIComponents() {
